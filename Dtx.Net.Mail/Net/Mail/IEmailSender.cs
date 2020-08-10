@@ -1,6 +1,10 @@
-﻿namespace Dtx.Net.Mail
+﻿using System.Net.Mail;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
+namespace Dtx.Net.Mail
 {
-	public interface IEmailSender
+    public interface IEmailSender
     {
         string ConvertTextForEmailBody(string text);
         Task<Dtx.Result> Send(string subject, string body);
